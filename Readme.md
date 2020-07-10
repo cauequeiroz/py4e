@@ -5,8 +5,6 @@ This repository tracks my progress through Python for Everybody Specialization o
 - [x] Programming for Everybody (Getting Started with Python)  
 - [x] Python Data Structures  
 - [x] Using Python to Access Web Data  
-- [ ] Using Databases with Python  
-- [ ] Capstone: Retrieving, Processing, and Visualizing Data with Python
 
 
 
