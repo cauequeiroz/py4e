@@ -87,7 +87,7 @@ tracks = get_content('Library.xml')
 
 for track in tracks:
     # Handle artist
-    database.execute('SELECT * FROM Artist WHERE name="'+track.get('artist')+'"')
+    database.execute('SELECT * FROM Artist WHERE name=?', (track.get('artist'),))
     artist = database.fetchone()
 
     if artist is None:
@@ -97,7 +97,7 @@ for track in tracks:
         artist_id = artist[0]
 
     # Handle genre
-    database.execute('SELECT * FROM Genre WHERE name="'+track.get('genre')+'"')
+    database.execute('SELECT * FROM Genre WHERE name=?', (track.get('genre'),))
     genre = database.fetchone()
 
     if genre is None:
@@ -107,7 +107,7 @@ for track in tracks:
         genre_id = genre[0]
 
     # Handle album
-    database.execute('SELECT * FROM Album WHERE title="'+track.get('album')+'"')
+    database.execute('SELECT * FROM Album WHERE title=?', (track.get('album'),))
     album = database.fetchone()
 
     if album is None:
